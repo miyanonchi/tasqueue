@@ -1,0 +1,12 @@
+<% provide :subtitle, "Login" %>
+<h1>Login</h1>
+
+<%= render :partial => "share/flash" %>
+
+<%= form_for @user, :url => Rails.application.config.relative_url_root + "/login" do |f| %>
+  <%= f.label :account, "アカウント名" %>
+  <%= f.text_field :account, :placeholder => "username" %>
+  <%= f.label :password, "パスワード" %>
+  <%= f.password_field :password, :placeholder => "password" %>
+  <%= f.submit "ログイン" %>
+<% end %>

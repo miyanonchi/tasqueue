@@ -1,0 +1,30 @@
+.DS_Store
+thumbs.db
+__MACOSX
+._*
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore bundler gems.
+vendor/*
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+/db/schema.rb
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+/public/assets/*
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

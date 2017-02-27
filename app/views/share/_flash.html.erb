@@ -1,0 +1,7 @@
+<% flash.each do |level, msg| %>
+<% level = (level=="notice")? "success": (level == "alert")? "danger": level %>
+
+<div class="alert alert-<%= level %>">
+  <%= msg %>
+</div>
+<% end %>
