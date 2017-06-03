@@ -13,6 +13,9 @@
  *= require bootstrap
  *= require bootstrap-theme
  *= require grayscale
+ *= require home
+ *= require welcome
  *= require_tree .
  *= require_self
  */
+

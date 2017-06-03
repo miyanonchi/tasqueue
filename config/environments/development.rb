@@ -37,13 +37,17 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-  config.public_file_server.enabled = true
+  config.public_file_server.enabled = false
 
   ENV["RAILS_RELATIVE_URL_ROOT"] = "/tasqueue"
   Rails.application.config.relative_url_root = "/tasqueue"
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.assets.enabled = true
+  config.assets.compress = false
+  config.assets.debug = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.

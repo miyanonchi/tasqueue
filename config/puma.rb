@@ -46,7 +46,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 pidfile "#{Dir.pwd}/tmp/pids/puma.pid"
 state_path "#{Dir.pwd}/tmp/pids/puma.state"
 
-#daemonize true
+daemonize true
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart

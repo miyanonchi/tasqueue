@@ -1,4 +1,33 @@
 <% provide :subtitle, "home" %>
-<h1>Home</h1>
 
 <% render :partial => "share/flash" %>
+
+<div id="main" class="col-md-8 col-md-offset-2">
+<ul class="nav nav-tabs">
+<% @queue.each do |q| %>
+  <%= ("<script>console.log(" + q.to_json + ");</script>").html_safe %>
+  <li class="tabs tasqueue<%= q.priority == 1? ' active': '' %>">
+    <a data-toggle="tab" href="#task_queue<%= q.id %>">
+      <%= q.name %>
+      <span class="glyphicon glyphicon-cog"></span>
+    </a>
+  </li>
+<% end %>
+  <li class="tabs tasqueue">
+    <a data-toggle="tab" href="#"></a>
+  </li>
+</ul>
+
+<div class="tab-content">
+<% @queue.each do |q| %>
+  <div id="task_queue<%= q.id %>" class="tab-pane fade in <%= q.priority == 1? "active": "" %>">
+  <% q.tasks.each do |t| %>
+    <%= ("<script>console.log(" + t.to_json + ");</script>").html_safe %>
+    <h3><%= t.task %></h3>
+    <p>Some content.</p>
+  <% end %>
+  </div>
+<% end %>
+</div>
+</div>
+

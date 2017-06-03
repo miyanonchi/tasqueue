@@ -1,0 +1,24 @@
+.colcboard {
+  background: image-url('background.jpg') no-repeat bottom center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.main {
+  height: 100%;
+  margin: 10px;
+  margin-top: 90px;
+}
+
+div#main {
+  height: 100%;
+}
+
+div.sidebar {
+  position: absolute;
+  background-color: rgba(255,255,255,0.6);
+  right: 0px;
+  top: 0px;
+  margin: 10px;
+  margin-top: 90px;
+}

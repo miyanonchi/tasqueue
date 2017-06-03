@@ -1,4 +1,5 @@
-- account: miyachi
+- id: 1
+  account: miyachi
   password: miyanonchi
   family_name: miyano
   first_name: takumi
